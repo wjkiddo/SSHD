@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false" 
+		/> <constant name="struts.devMode" value="true" /> <package name="default" 
+		namespace="/" extends="struts-default"> <default-action-ref name="index" 
+		/> <global-results> <result name="error">/error.jsp</result> </global-results> 
+		<global-exception-mappings> <exception-mapping exception="java.lang.Exception" 
+		result="error" /> </global-exception-mappings> <action name="index"> <result 
+		type="redirectAction"> <param name="actionName">HelloWorld</param> <param 
+		name="namespace">/example</param> </result> </action> </package> <include 
+		file="example.xml" /> -->
+
+	<!-- Add packages here -->
+
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="*" class="com.hr.Actions.{1}Action">
+			<result name="registerError">
+				/registerError.jsp
+			</result>
+
+			<result name="registerSuccess">
+				/registerSuccess.jsp
+			</result>
+
+			<result name="loginSuccess">
+				/search.jsp
+			</result>
+
+			<result name="loginError">
+				/loginError.jsp
+			</result>
+
+			<result name="addBook">
+				/addBookByBatch.jsp
+			</result>
+
+			<result name="showPage">
+				/showPage.jsp
+			</result>
+
+			<result name="bookList">
+				/showPage.jsp
+			</result>
+
+			<result name="cart">
+				/cart.jsp
+			</result>
+
+			<result name="error">
+				/error.jsp
+			</result>
+
+			<result name="adminLogin">
+				/addBookByBatch.jsp
+			</result>
+
+			<result name="changePWDSuccess">
+				/index.jsp
+			</result>
+
+			<result name="changePWDError">
+				/changePWD.jsp
+			</result>
+
+
+		</action>
+
+
+
+	</package>
+
+</struts>
