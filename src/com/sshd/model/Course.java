@@ -5,13 +5,35 @@ import java.io.Serializable;
 public class Course implements Serializable{
 	private int id;
 	private String name;
-	private String schooltime;
+	private String schoolTime;
 	private float credit;
-	private int teacherid;
+	private int teacherId;
 	private boolean finished;
-	private int maxnum;
-	private int selectednum;
-	private int unselectednum;
+	private int maxNum;
+	private int selectedNum;
+	private int unSelectedNum;
+
+	public Course(){};
+	
+	
+	public Course(String name, String schoolTime, float credit, int teacherId,
+			int maxNum) {
+		super();
+		this.name = name;
+		this.schoolTime = schoolTime;
+		this.credit = credit;
+		this.teacherId = teacherId;
+		this.maxNum = maxNum;
+		this.unSelectedNum = maxNum;
+	}
+
+
+	public boolean getFinished() {
+		return finished;
+	}
+	public void setFinished(boolean isFinished) {
+		this.finished = isFinished;
+	}
 	public int getId() {
 		return id;
 	}
@@ -24,11 +46,11 @@ public class Course implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSchooltime() {
-		return schooltime;
+	public String getSchoolTime() {
+		return schoolTime;
 	}
-	public void setSchooltime(String schooltime) {
-		this.schooltime = schooltime;
+	public void setSchoolTime(String schoolTime) {
+		this.schoolTime = schoolTime;
 	}
 	public float getCredit() {
 		return credit;
@@ -36,36 +58,33 @@ public class Course implements Serializable{
 	public void setCredit(float credit) {
 		this.credit = credit;
 	}
-	public int getTeacherid() {
-		return teacherid;
+	public int getTeacherId() {
+		return teacherId;
 	}
-	public void setTeacherid(int teacherid) {
-		this.teacherid = teacherid;
+	public void setTeacherId(int teacherId) {
+		this.teacherId = teacherId;
 	}
-	public boolean getFinished() {
-		return finished;
+	public int getMaxNum() {
+		return maxNum;
 	}
-	public void setFinished(boolean isFinished) {
-		this.finished = isFinished;
+	public void setMaxNum(int maxNum) {
+		this.maxNum = maxNum;
 	}
-	public int getMaxnum() {
-		return maxnum;
+	public int getSelectedNum() {
+		return selectedNum;
 	}
-	public void setMaxnum(int maxnum) {
-		this.maxnum = maxnum;
+	public void setSelectedNum(int selectedNum) {
+		this.selectedNum = selectedNum;
 	}
-	public int getSelectednum() {
-		return selectednum;
+	public int getUnSelectedNum() {
+		return unSelectedNum;
 	}
-	public void setSelectednum(int selectednum) {
-		this.selectednum = selectednum;
+	public void setUnSelectedNum(int unSelectedNum) {
+		this.unSelectedNum = unSelectedNum;
 	}
-	public int getUnselectednum() {
-		return unselectednum;
-	}
-	public void setUnselectednum(int unselectednum) {
-		this.unselectednum = unselectednum;
-	}
+	
+
+	
 	
 	
 	

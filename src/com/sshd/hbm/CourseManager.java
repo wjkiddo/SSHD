@@ -17,10 +17,10 @@ public class CourseManager {
 
 			Course c = new Course();
 			c.setName(name);
-			c.setSchooltime(schooltime);
+			c.setSchoolTime(schooltime);
 			c.setCredit(credit);
-			c.setTeacherid(teacherId);
-			c.setMaxnum(maxnum);
+			c.setTeacherId(teacherId);
+			c.setMaxNum(maxnum);
 			session.save(c);
 			session.getTransaction().commit();
 

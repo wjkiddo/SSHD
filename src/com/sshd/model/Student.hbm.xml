@@ -5,18 +5,13 @@
 
 <hibernate-mapping package="com.sshd.model">
 
-	<class name="Course" table="course">
+	<class name="Student" table="STUDENT">
 		<id name="id" column="id">
 			<generator class="native" />
 		</id>
 		<property name="name" />
-		<property name="schoolTime"  column="schooltime"/>
-		<property name="credit" />
-		<property name="finished" />
-		<property name="maxNum" column="maxnum"/>
-		<property name="selectedNum" column="selectednum"/>
-		<property name="unSelectedNum"  column="unselectednum"/>
-		<property name="teacherId"  column="teacherid"/>
+		<property name="stuNo" column="stuId" />
+		<property name="sex" />
 	</class>
 
 </hibernate-mapping> 

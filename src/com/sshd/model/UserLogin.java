@@ -35,4 +35,32 @@ public class UserLogin implements Serializable {
 		this.id = id;
 	}
 	
+	
+public static String getStringType(TYPE type) {
+		
+		String result = null;
+		if(TYPE.S==type) {
+			result = "S";
+		}
+		
+		if(TYPE.M==type) {
+			result = "M";
+		}
+		
+		if(TYPE.T==type) {
+			result = "T";
+		}
+		return result;
+	}
+
+public static TYPE stringToType(String s) {
+		TYPE type = TYPE.S;
+		if("T".equals(s)) {
+			type = TYPE.T;
+		}else if("M".equals(s)) {
+			type = TYPE.M;
+		}
+		return type;
+}
+	
 }

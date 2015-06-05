@@ -27,7 +27,7 @@ public class UserLoginManager {
 				UserLogin ul = new UserLogin();
 				ul.setLoginName(name);
 				ul.setPwd(pwd);
-				ul.setType(getStringType(type));
+				ul.setType(UserLogin.getStringType(type));
 				session.save(ul);
 				session.getTransaction().commit();
 
@@ -45,22 +45,7 @@ public class UserLoginManager {
 		
 	}
 
-	public String getStringType(TYPE type) {
-		
-		String result = null;
-		if(TYPE.S==type) {
-			result = "S";
-		}
-		
-		if(TYPE.M==type) {
-			result = "M";
-		}
-		
-		if(TYPE.T==type) {
-			result = "T";
-		}
-		return result;
-	}
+	
 	
 	
 	public static void main(String[] args) {
